@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Full-Stack E-Commerce Application
 
 A learning/project-ready e-commerce application with:
@@ -144,3 +145,6 @@ This project is designed as a strong learning/project foundation, not as a produ
 - Add audit logs.
 - Add proper database migrations with Flyway/Liquibase.
 - Add automated tests.
+=======
+# shopsphere-ecommerce
+>>>>>>> 0b1885cc0e7a4e965d6f8e19e68ad1422549489a
