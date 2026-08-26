@@ -237,16 +237,27 @@ npm run dev
 
 The application is deployed using Railway.
 
-GitHub
-   │
-   ├───────────────┐
-   ▼               ▼
-Frontend        Backend
-Railway         Railway
-                    │
-                    ▼
-                  MySQL
-                 Railway
+                        GitHub
+                           │
+                           ▼
+                  ┌─────────────────┐
+                  │  React + Vite   │
+                  │    FRONTEND     │
+                  └────────┬────────┘
+                           │
+                           │
+                           ▼
+                  ┌─────────────────┐
+                  │   Spring Boot   │
+                  │     BACKEND     │
+                  └────────┬────────┘
+                           │
+                           │
+                           ▼
+                  ┌─────────────────┐
+                  │  Railway MySQL  │
+                  │    DATABASE     │
+                  └─────────────────┘
 
 
 
