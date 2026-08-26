@@ -17,3 +17,14 @@ frontend/dist/
 # OS
 .DS_Store
 Thumbs.db
+
+# Node
+node_modules/
+frontend/node_modules/
+
+# Vite
+frontend/dist/
+
+# Environment files
+frontend/.env
+frontend/.env.local
