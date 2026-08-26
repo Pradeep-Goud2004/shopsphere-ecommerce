@@ -242,14 +242,16 @@ The application is deployed using Railway.
                            ▼
                   ┌─────────────────┐
                   │  React + Vite   │
-                  │    FRONTEND     │
+                  │    FRONTEND 
+                  │   (Railway)
                   └────────┬────────┘
                            │
                            │
                            ▼
                   ┌─────────────────┐
                   │   Spring Boot   │
-                  │     BACKEND     │
+                  │     BACKEND  
+                  │    (Railway)
                   └────────┬────────┘
                            │
                            │
