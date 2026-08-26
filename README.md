@@ -106,9 +106,8 @@ https://shopsphere-ecommerce-production.up.railway.app
                     │      Database       │
                     └─────────────────────┘
 
-## Folder structure
+📁 Project Structure
 
-```text
 shopsphere-ecommerce/
 │
 ├── backend/
