@@ -28,12 +28,12 @@ public class DataInitializer {
             if (!users.existsByEmail("admin@example.com")) {
 
                 users.save(
-                    AppUser.builder()
-                            .name("Administrator")
-                            .email("admin@example.com")
-                            .password(encoder.encode("Admin@123"))
-                            .role(Role.ADMIN)
-                            .build()
+                        AppUser.builder()
+                                .name("Administrator")
+                                .email("admin@example.com")
+                                .password(encoder.encode("Admin@123"))
+                                .role(Role.ADMIN)
+                                .build()
                 );
             }
 
@@ -46,32 +46,41 @@ public class DataInitializer {
                     categories.findAll()
                             .stream()
                             .filter(c -> c.getName()
-                            .equalsIgnoreCase("Electronics"))
+                                    .equalsIgnoreCase("Electronics"))
                             .findFirst()
-                            .orElseGet(() ->categories.save(Category.builder()
-                            .name("Electronics")
-                            .build()
+                            .orElseGet(() ->
+                                    categories.save(
+                                            Category.builder()
+                                                    .name("Electronics")
+                                                    .build()
                                     )
                             );
 
             Category fashion =
                     categories.findAll()
                             .stream()
-                            .filter(c -> c.getName() .equalsIgnoreCase("Fashion"))
+                            .filter(c -> c.getName()
+                                    .equalsIgnoreCase("Fashion"))
                             .findFirst()
-                            .orElseGet(() ->categories.save( Category.builder()
-                            .name("Fashion")
-                            .build()
+                            .orElseGet(() ->
+                                    categories.save(
+                                            Category.builder()
+                                                    .name("Fashion")
+                                                    .build()
                                     )
                             );
 
-            Category home =categories.findAll()
+            Category home =
+                    categories.findAll()
                             .stream()
-                            .filter(c ->c.getName().equalsIgnoreCase("Home"))
+                            .filter(c -> c.getName()
+                                    .equalsIgnoreCase("Home"))
                             .findFirst()
-                            .orElseGet(() ->categories.save(Category.builder()
-                            .name("Home")
-                            .build()
+                            .orElseGet(() ->
+                                    categories.save(
+                                            Category.builder()
+                                                    .name("Home")
+                                                    .build()
                                     )
                             );
 
@@ -80,92 +89,115 @@ public class DataInitializer {
             // WIRELESS HEADPHONES
             // ==========================================
 
-        //     if (products.findAll()
-        //             .stream()
-        //             .noneMatch(p ->p.getName().equalsIgnoreCase( "SmartPhone"))) {
+            if (products.findAll()
+                    .stream()
+                    .noneMatch(p -> p.getName()
+                            .equalsIgnoreCase("Wireless Headphones"))) {
 
-        //         products.save(
-        //             Product.builder()
-        //                     .name("SmartPhone")
-        //                     .brand("GooglePixel")
-        //                     .description("A Rolex watch represents luxury, precision, and timeless elegance. Crafted with high-quality materials and exceptional attention to detail, it features a sophisticated design, reliable movement, and durable construction.")
-        //                     .price(new BigDecimal(".00"))
-        //                     .quantity(10)
-        //                     .available(true)
-        //                     .imageUrl("https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSW-aof6ClOoo5mICT1BVk9pC8VcSmQyPZT2G3BuFCvvMJdk6cLyDyANYMxwhD3roo-xupV2U1IgpRSP_3kjPM2P6-2wrC2MmRz_UVlA9iN6AYfn_A66eOs8sY" )
-        //                     .category(electronics)
-        //                     .build()
-        //         );
-        //     }
+                products.save(
+                        Product.builder()
+                                .name("Wireless Headphones")
+                                .brand("SoundMax")
+                                .description(
+                                        "Bluetooth over-ear wireless headphones with clear sound."
+                                )
+                                .price(new BigDecimal("2799.00"))
+                                .quantity(50)
+                                .available(true)
+                                .imageUrl(
+                                        "https://images.unsplash.com/photo-1505740420928-5e560c06d30e"
+                                )
+                                .category(electronics)
+                                .build()
+                );
+            }
 
 
-        //     // // ==========================================
-        //     // // CLASSIC T-SHIRT
-            // // ==========================================
+            // ==========================================
+            // CLASSIC T-SHIRT
+            // ==========================================
 
-            // if (products.findAll()
-            //         .stream()
-            //         .noneMatch(p ->p.getName() .equalsIgnoreCase("Classic T-Shirt"))) {
+            if (products.findAll()
+                    .stream()
+                    .noneMatch(p -> p.getName()
+                            .equalsIgnoreCase("Classic T-Shirt"))) {
 
-            //     products.save(
-            //         Product.builder()
-            //                 .name("Classic T-Shirt")
-            //                 .brand("UrbanWear")
-            //                 .description("Comfortable cotton everyday t-shirt." )
-            //                 .price(new BigDecimal("699.00") )
-            //                 .quantity(100)
-            //                 .available(true)
-            //                 .imageUrl( "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab")
-            //                 .category(fashion)
-            //                 .build()
-            //     );
-            // }
+                products.save(
+                        Product.builder()
+                                .name("Classic T-Shirt")
+                                .brand("UrbanWear")
+                                .description(
+                                        "Comfortable cotton everyday t-shirt."
+                                )
+                                .price(new BigDecimal("699.00"))
+                                .quantity(100)
+                                .available(true)
+                                .imageUrl(
+                                        "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab"
+                                )
+                                .category(fashion)
+                                .build()
+                );
+            }
 
 
             // ==========================================
             // DESK LAMP
             // ==========================================
 
-            // if (products.findAll()
-            //         .stream()
-            //         .noneMatch(p ->p.getName() .equalsIgnoreCase( "Desk Lamp"))) {
+            if (products.findAll()
+                    .stream()
+                    .noneMatch(p -> p.getName()
+                            .equalsIgnoreCase("Desk Lamp"))) {
 
-            //     products.save(
-            //         Product.builder()
-            //                 .name("Desk Lamp")
-            //                 .brand("HomeLite")
-            //                 .description("Minimal LED desk lamp for work and study.")
-            //                 .price(new BigDecimal("1299.00"))
-            //                 .quantity(40)
-            //                 .available(true)
-            //                 .imageUrl("https://images.unsplash.com/photo-1507473885765-e6ed057f782c" )
-            //                 .category(home)
-            //                 .build()
-            //     );
-            // }
+                products.save(
+                        Product.builder()
+                                .name("Desk Lamp")
+                                .brand("HomeLite")
+                                .description(
+                                        "Minimal LED desk lamp for work and study."
+                                )
+                                .price(new BigDecimal("1299.00"))
+                                .quantity(40)
+                                .available(true)
+                                .imageUrl(
+                                        "https://images.unsplash.com/photo-1507473885765-e6ed057f782c"
+                                )
+                                .category(home)
+                                .build()
+                );
+            }
 
 
             // ==========================================
             // SPORTS SHOE
             // ==========================================
 
-            // if (products.findAll()
-            //         .stream()
-            //         .noneMatch(p ->p.getName() .equalsIgnoreCase("Sports Shoe"))) {
+            if (products.findAll()
+                    .stream()
+                    .noneMatch(p -> p.getName()
+                            .equalsIgnoreCase("Sports Shoe"))) {
 
-            //     products.save(
-            //         Product.builder()
-            //                 .name("Sports Shoe")
-            //                 .brand("Nike")
-            //                 .description("Nike sports shoes are designed for comfort, performance, and style. They feature a lightweight construction, cushioned sole, breathable upper, and excellent grip, making them suitable for running, gym workouts, training, walking, and everyday sports activities.")
-            //                 .price(new BigDecimal("3651.99"))
-            //                 .quantity(10)
-            //                 .available(true)
-            //                 .imageUrl("https://assets.ajio.com/medias/sys_master/root1/20250716/aATt/687795315d4cb41380174a82/-473Wx593H-469759339-white-MODEL.jpg")
-            //                 .category(fashion)
-            //                 .build()
-            //     );
-            // }
+                products.save(
+                        Product.builder()
+                                .name("Sports Shoe")
+                                .brand("Nike")
+                                .description(
+                                        "Nike sports shoes are designed for comfort, performance, and style. " +
+                                        "They feature a lightweight construction, cushioned sole, breathable upper, " +
+                                        "and excellent grip, making them suitable for running, gym workouts, " +
+                                        "training, walking, and everyday sports activities."
+                                )
+                                .price(new BigDecimal("3651.99"))
+                                .quantity(10)
+                                .available(true)
+                                .imageUrl(
+                                        "https://assets.ajio.com/medias/sys_master/root1/20250716/aATt/687795315d4cb41380174a82/-473Wx593H-469759339-white-MODEL.jpg"
+                                )
+                                .category(fashion)
+                                .build()
+                );
+            }
 
         };
     }
