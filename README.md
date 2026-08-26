@@ -180,27 +180,27 @@ The application uses MySQL with Spring Data JPA and Hibernate.
 
 Main entities include:
 
-User
-Category
-Product
-Cart
-Wishlist
-Order
-OrderItem
+User,
+Category,
+Product,
+Cart,
+Wishlist,
+Order,
+OrderItem.
 
 🔒 Security
 
 The application implements:
 
-Spring Security
-JWT authentication
-BCrypt password hashing
-Role-based authorization
-CORS configuration
-Stateless session management
-Protected admin APIs
-Environment-based production secrets
-Global exception handling
+Spring Security,
+JWT authentication,
+BCrypt password hashing,
+Role-based authorization,
+CORS configuration,
+Stateless session management,
+Protected admin APIs,
+Environment-based production secrets,
+Global exception handling,
 
 🚀 Local Development Prerequisites
 
