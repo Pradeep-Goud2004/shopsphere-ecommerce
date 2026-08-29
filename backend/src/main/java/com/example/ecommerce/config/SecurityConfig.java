@@ -50,6 +50,9 @@ public class SecurityConfig {
        
     config.setAllowedOrigins(
             List.of(allowedOrigins.split(","))
+            .stream()
+            .map(String::trim)
+            .toList()
            );
         config.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));
         config.setAllowedHeaders(List.of("*"));
